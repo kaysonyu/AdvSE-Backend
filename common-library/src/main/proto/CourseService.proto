@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cn.edu.fudan.advse.commonlibrary.lib";
+option java_outer_classname = "CourseServiceProto";
+
+service CourseService {
+  rpc GetCourseById (CourseRequest) returns (CourseResponse);
+}
+
+message CourseRequest {
+  int32 course_id = 1;
+}
+
+message CourseResponse {
+  int32 course_id = 1;
+  string course_name = 2;
+}
+

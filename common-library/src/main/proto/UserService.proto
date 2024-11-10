@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cn.edu.fudan.advse.commonlibrary.lib";
+option java_outer_classname = "UserServiceProto";
+
+service UserService {
+  rpc GetUserById (UserRequest) returns (UserResponse);
+}
+
+message UserRequest {
+  int32 user_id = 1;
+}
+
+message UserResponse {
+  int32 user_id = 1;
+  string name = 2;
+  string email = 3;
+}
+
