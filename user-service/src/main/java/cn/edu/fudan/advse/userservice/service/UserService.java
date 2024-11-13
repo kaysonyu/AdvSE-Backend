@@ -4,6 +4,8 @@ import cn.edu.fudan.advse.userservice.entity.User;
 
 public interface UserService {
 
-    int register(User user);
+    User register(User user) throws Exception;
+
+    String login(String username, String password) throws Exception;
 
 }
