@@ -21,6 +21,9 @@ public class ApiResponse<T> {
         return new ApiResponse<>(200, "Success", data);
     }
 
+    // 不含返回对象的成功响应
+    public static <T> ApiResponse<T> success() { return new ApiResponse<>(200, "success", null); }
+
     // 静态工厂方法：生成失败响应
     public static <T> ApiResponse<T> fail(int statusCode, String message) {
         return new ApiResponse<>(statusCode, message, null);
