@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: assignment-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: kang
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+grpc:
+  server:
+    port: 0
+  client:
+    user-service:
+      enable-keep-alive: true
+      keep-alive-without-calls: true
+      negotiation-type: plaintext
